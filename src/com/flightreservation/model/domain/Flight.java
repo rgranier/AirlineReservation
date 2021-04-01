@@ -10,7 +10,7 @@ public class Flight {
 	private int id;
 	private String originAirport;
 	private String destinationAirport;
-	private LocalDateTime departingTime;
+	private LocalDateTime departureTime;
 	private LocalDateTime arrivalTime;
 	private String aircraft;
 	private int numSeats;
@@ -19,21 +19,21 @@ public class Flight {
 	public Flight() {
 	}
 
-	public Flight(int id, String originAirport, String destinationAirport, LocalDateTime departingTime,
+	public Flight(int id, String originAirport, String destinationAirport, LocalDateTime departureTime,
 			LocalDateTime arrivalTime) {
 		this.id = id;
 		this.originAirport = originAirport;
 		this.destinationAirport = destinationAirport;
-		this.departingTime = departingTime;
+		this.departureTime = departureTime;
 		this.arrivalTime = arrivalTime;
 	}
 
-	public Flight(int id, String originAirport, String destinationAirport, LocalDateTime departingTime,
+	public Flight(int id, String originAirport, String destinationAirport, LocalDateTime departureTime,
 			LocalDateTime arrivalTime, String aircraft, int numSeats) {
 		this.id = id;
 		this.originAirport = originAirport;
 		this.destinationAirport = destinationAirport;
-		this.departingTime = departingTime;
+		this.departureTime = departureTime;
 		this.arrivalTime = arrivalTime;
 		this.aircraft = aircraft;
 		this.numSeats = numSeats;
@@ -52,8 +52,8 @@ public class Flight {
 		return destinationAirport;
 	}
 
-	public LocalDateTime getDepartingTime() {
-		return departingTime;
+	public LocalDateTime getDepartureTime() {
+		return departureTime;
 	}
 
 	public LocalDateTime getArrivalTime() {
@@ -80,8 +80,8 @@ public class Flight {
 		this.destinationAirport = destinationAirport;
 	}
 
-	public void setDepartingTime(LocalDateTime departingTime) {
-		this.departingTime = departingTime;
+	public void setDepartureTime(LocalDateTime departureTime) {
+		this.departureTime = departureTime;
 	}
 
 	public void setArrivalTime(LocalDateTime arrivalTime) {
@@ -105,7 +105,7 @@ public class Flight {
 	@Override
 	public String toString() {
 		return "Flight [id=" + id + ", originAirport=" + originAirport + ", destinationAirport=" + destinationAirport
-				+ ", departingTime=" + departingTime + ", arrivalTime=" + arrivalTime + ", aircraft=" + aircraft
+				+ ", departingTime=" + departureTime + ", arrivalTime=" + arrivalTime + ", aircraft=" + aircraft
 				+ ", numSeats=" + numSeats + "]";
 	}
 }

@@ -5,6 +5,8 @@
  * NOTE:  No validate in this one for now.  Not testing this one for now.
  */
 package com.flightreservation.model.domain;
+import java.util.ArrayList;
+
 public class Composite {
 	
 	private Traveler traveler;
@@ -12,12 +14,13 @@ public class Composite {
 	private Flight flight;
 	private Itinerary itinerary;
 	
+	private ArrayList<Flight> flightList;
+	
 	
 	// Constructors
 	public Composite() {
 	}
 
-	
 	// Getters and setters
 	public Traveler getTraveler() {
 		return traveler;
@@ -36,6 +39,11 @@ public class Composite {
 
 	public Itinerary getItinerary() {
 		return itinerary;
+	}
+
+
+	public ArrayList<Flight> getFlightList() {
+		return flightList;
 	}
 
 
@@ -59,11 +67,15 @@ public class Composite {
 	}
 
 
+	public void setFlightList(ArrayList<Flight> flightList) {
+		this.flightList = flightList;
+	}
+
 	// toString
 	@Override
 	public String toString() {
 		return "Composite [traveler=" + traveler + ", reservation=" + reservation + ", flight=" + flight
-				+ ", itinerary=" + itinerary + "]";
+				+ ", itinerary=" + itinerary + ", flightList=" + flightList + "]";
 	}
-	
+
 }
